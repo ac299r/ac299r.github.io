@@ -55,11 +55,46 @@
 				<div class="container">
 
 					<h2>Multi-duration Saliency</h2>
-					<img src="images/iccv.png" alt="" style="width:50%"/>
+					<a href="http://iccvpat.github.io" >Website</a></br>
+					<img src="images/iccv.png" alt="" style="width:50%; margin-top:20px;"/>
+					<h4>Abstract</h4>
 					<p>What jumps out at you in a single glance of an image is different than what you might notice after closer inspection. Despite this, models of visual saliency have ignored the temporal aspect of visual attention and have produced prediction maps at fixed viewing durations. As a result, current applications leveraging saliency models are rigidly tailored for a fixed viewing duration, depending on the attention dataset they were trained on. To incorporate knowledge of viewing duration into saliency modeling, our group first developed a “Codecharts UI" and used it to crowdsource human attention at various viewing durations. We collected the CodeCharts1K dataset, which contains viewing data at 0.5, 3, and 5 seconds on 1000 images from diverse computer vision datasets. Our analysis shows distinct differences in gaze locations at these time points and exposes recurring temporal patterns about which objects attract attention.</p>
  					<p>Using insights from this analysis, our group developed an LSTM-based model of saliency that simultaneously trains on data from multiple time points. Our Multi-Duration Saliency Excited Model (MD-SEM) achieves state-of-the-art performance on the LSUN 2017 Challenge with 57% fewer parameters than comparable architectures. Additionally, it provides new predictions at time points that current models can not predict. We explore applications where multi-duration saliency can be used to prioritize the visual content to keep, transmit, and render.</p>
 
+					<h4>Our Focus</h4>
+					<p>We contributed to various aspects of the project and our focus was on the applications of multi-duration saliency. </p>
 					<div class="flex-container">
+						<div class="imgapps">
+							<div class="img" style="background-image:url('images/iccv-apps/cropping.png');"></div>
+							<!-- <p class="small">Automatic cropping of images may be useful for image thumbnails and view-finding for improved composition. Multi-duration saliency allows us create better image thumbnails or composition based on the expected users’ viewing duration.
+								The image is an example of images cropped based on viewing time selecting windows to capture 90% of the most salient regions (shown by the heatmap, where the more yellow the more salient it is). We notice that these crops tend to contain close-ups of content for shorter duration. This is expected as people are only attracted to the few most salient objects at the beginning. </p> -->
+						</div>
+						<div class="imgapps">
+							<div class="img" style="background-image:url('images/iccv-apps/rendering.png');"></div>
+							<!-- <p class="small">As saliency is useful for prioritizing the visual content of an image, we further augment this aspect with the temporal component. We provide a visualization of which visual content would be prioritized at different viewing durations when rendering the important regions. For instance,for a shorter viewing duration, fewer visual elements should be rendered because people are looking at fewer elements. We do so by using Mask RCNN to obtain instance segmentation and mapping each instance to the saliency predictions. Instances that have a mean saliency score in the 90th percentiles are kept, and the rest are blurred and darkened. The figure below illustrates this concept, where the longer you look, the more you see.  </p> -->
+						</div>
+						<div class="imgapps">
+							<div class="img" style="background-image:url('images/iccv-apps/caption.png');"></div>
+							<!-- <p class="small">Captions are useful for image retrieval and visual question answering tasks. Multi-duration saliency can help leverage the sequential viewing of the image, while improving the captioning performance by using saliency to approximate human attention. The multi-duration saliency maps produced by this model offers a close approximation to how humans view images and provide an opportunity to focus attention on the most relevant regions for a given viewing duration.  As shown in the figure below, removing the non-salient visual clutter produces promising initial results when tested on the state of the art results available on github.
+							</p> -->
+						</div>
+					</div>
+					<div class="flex-container">
+						<div class="imgapps">
+							<p class="small">Automatic cropping of images may be useful for image thumbnails and view-finding for improved composition. Multi-duration saliency allows us create better image thumbnails or composition based on the expected users’ viewing duration.
+								The image is an example of images cropped based on viewing time selecting windows to capture 90% of the most salient regions (shown by the heatmap, where the more yellow the more salient it is). We notice that these crops tend to contain close-ups of content for shorter duration. This is expected as people are only attracted to the few most salient objects at the beginning. </p>
+						</div>
+						<div class="imgapps">
+							<p class="small">As saliency is useful for prioritizing the visual content of an image, we further augment this aspect with the temporal component. We provide a visualization of which visual content would be prioritized at different viewing durations when rendering the important regions. For instance,for a shorter viewing duration, fewer visual elements should be rendered because people are looking at fewer elements. We do so by using Mask RCNN to obtain instance segmentation and mapping each instance to the saliency predictions. Instances that have a mean saliency score in the 90th percentiles are kept, and the rest are blurred and darkened. The figure below illustrates this concept, where the longer you look, the more you see.  </p>
+						</div>
+						<div class="imgapps">
+							<p class="small">Captions are useful for image retrieval and visual question answering tasks. Multi-duration saliency can help leverage the sequential viewing of the image, while improving the captioning performance by using saliency to approximate human attention. The multi-duration saliency maps produced by this model offers a close approximation to how humans view images and provide an opportunity to focus attention on the most relevant regions for a given viewing duration.  As shown in the figure below, removing the non-salient visual clutter produces promising initial results when tested on the state of the art results available on github.
+							</p>
+						</div>
+					</div>
+				</div>
+
+					<!-- <div class="flex-container">
 						<div class="imgdiv">
 							<div class="img" style="background-image:url('images/iccv-apps/cropping.png');"></div>
 						</div>
@@ -74,9 +109,9 @@
 						<div class="imgdiv">
 							<div class="img-long" style="background-image:url('images/iccv-apps/model_architecture.jpg');"></div>
 						</div>
-					</div>
+					</div> -->
 
-					<a href="http://iccvpat.github.io">Website</a></br>
+
 
 
 
@@ -87,14 +122,26 @@
 				<div class="container">
 
 					<h2>Attention Methodologies</h2>
-					<img src="images/attent.png" alt="" style="width:50%"/>
+					<a href="http://turkeyes.mit.edu">Website</a></br>
+					<img src="images/attent.png" alt="" style="width:50%; margin-top:20px;"/>
 					<p>In this work, we compare and analyze four UIs for collecting crowdsourced attention maps. We introduce ZoomMaps, which allows collecting attention data at multiple image scales using the familiar zoom gesture on a mobile phone. We conduct the first in-depth analysis of CodeCharts, an interface for approximating eye locations at precise viewing durations. These novel interfaces are compared to ImportAnnots, a tool for collecting annotations of graphic design importance, and the moving-window interface BubbleView. We lay out in detail the methodology used for each of these interfaces and discuss which types of images and potential applications are appropriate for each. Additionally, we collect CodeCharts, ZoomMaps, and ImportAnnots data on five types of image stimuli - natural images, resumes, graphic designs, infographics, and academic posters - and analyze the results to characterize in detail what can be learned from each method of data collection. </p>
+					<h4>Our Focus</h4>
+					<p>Resume Analysis. To analyze resumes, we use three different methodologies: 1. CodeCharts, which shows images to users and ask them to enter the code on an image, by replacing the image with a map of codes, to indicate where they are looking at given the presentation time. This methodology approximates where the user is looking at given the presentation time; 2. ZoomMaps, where users have the view the images on a mobile phone and zoom in to enlarge parts of the image. This methodology captures where they have zoomed in; 3. ImportAnnots, in which users annotate with free-form shapes regions where they consider as important.
+For this case study, we obtained gaze points on 116 resumes using CodeCharts with presentation time of 0.5, 1, 2 and 6 seconds. Zoommaps attention maps have been obtained on 29 resumes to check what attracts further attetion. ImportAnnots attention maps have been collected on 26 resumes to find out what users consciously regard as important.
+We find that on 25 out of the 29 resumes analyzed with ZoomMaps, reviewers zoomed in on graphical elements such as bar charts and which are often used to represent the skill section. From CodeCharts, we discover that from shorter to longer viewing durations people's gaze moves increasingly towards textual elements, but that gaze moves away from bolded towards non-bolded text as shown below.
+</p>
+					<img src="images/charts.png" style="width: 50%;"/>
+					<p>This suggests that in the first few seconds of viewing reviewers focus on easily-visible elements like titles, section headings, and pictograms. Thus, visualizing resume data may actually be a successful technique for drawing a reviewer's attention to your skills.
+
+Interestingly, people's gaze continues to be attracted by faces even if those faces are iconographic. Out of 12 resumes that contained a face, all 12 had fixations on the face within two seconds of presentation time. This could indicate that personal portraits on a resume may distract a reviewer from other content.
+</p>
 					<div class="flex-container">
 						<div class="imgdiv">
 							<div class="img-code" style="background-image:url('images/zoom_code_comparison.png');"></div>
+							<div class="img-code" style="background-image:url('images/code2.png');"></div>
 						</div>
 					</div>
-					<a href="http://turkeyes.mit.edu">Website</a></br>
+
 
 
 				</div>
