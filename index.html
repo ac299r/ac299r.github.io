@@ -37,15 +37,15 @@
 					</header>
 					<div class="flex-container">
 						<div class="imgdiv">
-							<div class="img" style="background-image:url('images/people/Pat.jpg');"></div>
+							<div class="img-faces" style="background-image:url('images/people/Pat.jpg');"></div>
 							<p>Pat Sukhum</p>
 						</div>
 						<div class="imgdiv">
-							<div class="img" style="background-image:url('images/people/Matteo.jpg');"></div>
+							<div class="img-faces" style="background-image:url('images/people/Matteo.jpg');"></div>
 							<p>Yun Bin (Matteo) Zhang</p>
 						</div>
 					</div>
-					<p>During this semester, we worked under Zoya Bylinskii on multi-duration saliency and attention methodologies projects. We also worked in conjunction with other student researchers.  For multi-duration saliency, our group developed a deep learning network that can predict saliency at different viewing durations. For attention methodologies, our group shows comparison between 4 different user interfaces for collecting crowdsourced annotations of the important regions in images. Our work results in two paper submissions currently under review.  </p>
+					<p>During this semester, we worked under Zoya Bylinskii on multi-duration saliency and attention methodologies projects. We also worked heavily in conjunction with other student researchers.  For multi-duration saliency, our group developed a deep learning network that can predict saliency at different viewing durations. For attention methodologies, our group shows comparison between 4 different user interfaces for collecting crowdsourced annotations of the important regions in images. Our work results in two paper submissions currently under review.  </p>
 
 
 				</div>
@@ -56,11 +56,27 @@
 
 					<h2>Multi-duration Saliency</h2>
 					<img src="images/iccv.png" alt="" style="width:50%"/>
-					<p>What jumps out at you in a single glance of an image is different than what you might notice after closer inspection. Despite this, models of visual saliency have ignored the temporal aspect of visual attention and have produced prediction maps at fixed viewing durations. As a result, current applications leveraging saliency models are rigidly tailored for a fixed viewing duration, depending on the attention dataset they were trained on. To incorporate knowledge of viewing duration into saliency modeling, we first develop a “Codecharts UI" and use it to crowdsource human attention at various viewing durations. We collect the CodeCharts1K dataset, which contains viewing data at 0.5, 3, and 5 seconds on 1000 images from diverse computer vision datasets. Our analysis shows distinct differences in gaze locations at these time points and exposes recurring temporal patterns about which objects attract attention.</p>
- 					<p>Using insights from this analysis, we develop an LSTM-based model of saliency that simultaneously trains on data from multiple time points. Our Multi-Duration Saliency Excited Model (MD-SEM) achieves state-of-the-art performance on the LSUN 2017 Challenge with 57% fewer parameters than comparable architectures. Additionally, it provides new predictions at time points that current models can not predict. We explore applications where multi-duration saliency can be used to prioritize the visual content to keep, transmit, and render.</p>
+					<p>What jumps out at you in a single glance of an image is different than what you might notice after closer inspection. Despite this, models of visual saliency have ignored the temporal aspect of visual attention and have produced prediction maps at fixed viewing durations. As a result, current applications leveraging saliency models are rigidly tailored for a fixed viewing duration, depending on the attention dataset they were trained on. To incorporate knowledge of viewing duration into saliency modeling, our group first developed a “Codecharts UI" and used it to crowdsource human attention at various viewing durations. We collected the CodeCharts1K dataset, which contains viewing data at 0.5, 3, and 5 seconds on 1000 images from diverse computer vision datasets. Our analysis shows distinct differences in gaze locations at these time points and exposes recurring temporal patterns about which objects attract attention.</p>
+ 					<p>Using insights from this analysis, our group developed an LSTM-based model of saliency that simultaneously trains on data from multiple time points. Our Multi-Duration Saliency Excited Model (MD-SEM) achieves state-of-the-art performance on the LSUN 2017 Challenge with 57% fewer parameters than comparable architectures. Additionally, it provides new predictions at time points that current models can not predict. We explore applications where multi-duration saliency can be used to prioritize the visual content to keep, transmit, and render.</p>
+
+					<div class="flex-container">
+						<div class="imgdiv">
+							<div class="img" style="background-image:url('images/iccv-apps/cropping.png');"></div>
+						</div>
+						<div class="imgdiv">
+							<div class="img" style="background-image:url('images/iccv-apps/rendering.png');"></div>
+						</div>
+						<div class="imgdiv">
+							<div class="img" style="background-image:url('images/iccv-apps/caption.png');"></div>
+						</div>
+					</div>
+					<div class="flex-container">
+						<div class="imgdiv">
+							<div class="img-long" style="background-image:url('images/iccv-apps/model_architecture.jpg');"></div>
+						</div>
+					</div>
 
 					<a href="http://iccvpat.github.io">Website</a></br>
-					<a href="papers/iccv.pdf">Paper</a>
 
 
 
@@ -72,13 +88,27 @@
 
 					<h2>Attention Methodologies</h2>
 					<img src="images/attent.png" alt="" style="width:50%"/>
-					<p>In this work, we compare and analyze four UIs for collecting crowdsourced attention maps. We introduce ZoomMaps, which allows collecting attention data at multiple image scales using the familiar zoom gesture on a mobile phone. We conduct the first in-depth analysis of CodeCharts, an interface for approximating eye locations at precise viewing durations. These novel interfaces are compared to ImportAnnots, a tool for collecting annotations of graphic design importance, and the moving-window interface BubbleView. We lay out in detail the methodology used for each of these interfaces and discuss which types of images and potential applications are appropriate for each. Additionally, we collect CodeCharts, ZoomMaps, and ImportAnnots data on five types of image stimuli--natural images, resumes, graphic designs, infographics, and academic posters--and analyze the results to characterize in detail what can be learned from each method of data collection.</p>
+					<p>In this work, we compare and analyze four UIs for collecting crowdsourced attention maps. We introduce ZoomMaps, which allows collecting attention data at multiple image scales using the familiar zoom gesture on a mobile phone. We conduct the first in-depth analysis of CodeCharts, an interface for approximating eye locations at precise viewing durations. These novel interfaces are compared to ImportAnnots, a tool for collecting annotations of graphic design importance, and the moving-window interface BubbleView. We lay out in detail the methodology used for each of these interfaces and discuss which types of images and potential applications are appropriate for each. Additionally, we collect CodeCharts, ZoomMaps, and ImportAnnots data on five types of image stimuli - natural images, resumes, graphic designs, infographics, and academic posters - and analyze the results to characterize in detail what can be learned from each method of data collection.</p>
+					<div class="flex-container">
+						<div class="imgdiv">
+							<div class="img-code" style="background-image:url('images/zoom_code_comparison.png');"></div>
+						</div>
+					</div>
 					<a href="http://turkeyes.mit.edu">Website</a></br>
-					<a href="papers/attent.pdf">Paper</a>
+
 
 				</div>
-			</section
+			</section>
 
+			<section id="future" class="wrapper">
+				<div class="container">
+
+					<h2>Future Work</h2>
+					<p>Future work includes incorporating our predicted saliency maps as an attention mechanism in captioning models and collecting more data to perform additional analyses on attention methodologies. </p>
+
+
+				</div>
+			</section>
 
 
 		<!-- Scripts -->
