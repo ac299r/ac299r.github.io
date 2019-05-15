@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>AC299r</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="index.html">AC299r</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="#main">Home</a></li>
+						<li><a href="#multi-sal">Multi-duration Saliency</a></li>
+						<li><a href="#attent">Attention Methodologies</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>AC299r - Independent Research</h2>
+						<p>Pat Sukhum and Yun Bin Zhang</p>
+					</header>
+					<div class="flex-container">
+						<div class="imgdiv">
+							<div class="img" style="background-image:url('images/people/Pat.jpg');"></div>
+							<p>Pat</p>
+						</div>
+						<div class="imgdiv">
+							<div class="img" style="background-image:url('images/people/Matteo.jpg');"></div>
+							<p>Yun Bin (Matteo)</p>
+						</div>
+					</div>
+					<p>During this semester, we worked under Zoya Bylinskii on multi-duration saliency and attention methodologies project. For multi-duration saliency, our group developed a deep learning network that can predict saliency at different viewing durations. We are primarily involved in developing applications for this novel architecture. For attention methodologies, our group shows comparison between 4 different user interfaces for collecting crowdsourced annotations of the important regions in images.  </p>
+
+
+				</div>
+			</section>
+
+			<section id="multi-sal" class="wrapper">
+				<div class="container">
+
+					<h2>Multi-duration Saliency</h2>
+					<img src="images/iccv.png" alt="" style="width:50%"/>
+					<p>What jumps out at you in a single glance of an image is different than what you might notice after closer inspection. Despite this, models of visual saliency have ignored the temporal aspect of visual attention and have produced prediction maps at fixed viewing durations. As a result, current applications leveraging saliency models are rigidly tailored for a fixed viewing duration, depending on the attention dataset they were trained on. To incorporate knowledge of viewing duration into saliency modeling, we first develop a “Codecharts UI" and use it to crowdsource human attention at various viewing durations. We collect the CodeCharts1K dataset, which contains viewing data at 0.5, 3, and 5 seconds on 1000 images from diverse computer vision datasets. Our analysis shows distinct differences in gaze locations at these time points and exposes recurring temporal patterns about which objects attract attention.</p>
+ 					<p>Using insights from this analysis, we develop an LSTM-based model of saliency that simultaneously trains on data from multiple time points. Our Multi-Duration Saliency Excited Model (MD-SEM) achieves state-of-the-art performance on the LSUN 2017 Challenge with 57% fewer parameters than comparable architectures. Additionally, it provides new predictions at time points that current models can not predict. We explore applications where multi-duration saliency can be used to prioritize the visual content to keep, transmit, and render.</p>
+
+					<a href="http://iccvpat.github.io">Website</a></br>
+
+					<!-- <h3>Cropping </h3>
+					<p>Automatic cropping of images may be useful for image thumbnails and view-finding for improved composition [R.  England.    Twitter  uses  smart  cropping  to  make  image previews  more  interesting]. Multi-duration saliency allows us create better image thumbnails or composition based on the expected users’ viewing duration. </p>
+
+					<p>The figure above is an example of images cropped based on viewing time selecting windows to capture 90% of the most salient regions (shown by the heatmap, where the more yellow the more salient it is). We notice that these crops tend to contain close-ups of content for shorter duration. This is expected as people are only attracted to the few most salient objects at the beginning. </p>
+
+					<h3>Rendering </h3>
+					<p>As saliency is useful for prioritizing the visual content of an image, we further augment this aspect with the temporal component. We provide a visualization of which visual content would be prioritized at different viewing durations when rendering the important regions. For instance,for a shorter viewing duration, fewer visual elements should be rendered because people are looking at fewer elements. We do so by using Mask RCNN [cite mask RCNN?] to obtain instance segmentation and mapping each instance to the saliency predictions. Instances that have a mean saliency score in the 90th percentiles are kept, and the rest are blurred and darkened. The figure below illustrates this concept, where the longer you look, the more you see.  </p>
+					<img src="images/iccv-apps/rendering.png" alt="" style="width:50%"/>
+
+					<h3>Captioning </h3>
+					<p>Captions are useful for image retrieval and visual question answering tasks. Multi-duration saliency can help leverage the sequential viewing of the image, while improving the captioning performance by using saliency to approximate human attention [S. He,  H. R. Tavakoli,  A. Borji,  and N. Pugeault.   A synchronized multi-modal attention-caption dataset and analysis.arXiv preprint arXiv:1903.02499, 201]. The multi-duration saliency maps produced by this model offers a close approximation to how humans view images and provide an opportunity to focus attention on the most relevant regions for a given viewing duration.  As shown in the figure below, removing the non-salient visual clutter produces promising initial results when tested on the state of the art results available on github [https://github.com/ruotianluo/self-critical.pytorch] </p>
+					<img src="images/iccv-apps/caption.png" alt="" style="width:50%"/> -->
+
+				</div>
+			</section>
+
+			<section id="attent" class="wrapper">
+				<div class="container">
+
+					<h2>Attention Methodologies</h2>
+					<img src="images/attent.png" alt="" style="width:50%"/>
+					<p>In this work, we compare and analyze four UIs for collecting crowdsourced attention maps. We introduce ZoomMaps, which allows collecting attention data at multiple image scales using the familiar zoom gesture on a mobile phone. We conduct the first in-depth analysis of CodeCharts, an interface for approximating eye locations at precise viewing durations. These novel interfaces are compared to ImportAnnots, a tool for collecting annotations of graphic design importance, and the moving-window interface BubbleView. We lay out in detail the methodology used for each of these interfaces and discuss which types of images and potential applications are appropriate for each. Additionally, we collect CodeCharts, ZoomMaps, and ImportAnnots data on five types of image stimuli--natural images, resumes, graphic designs, infographics, and academic posters--and analyze the results to characterize in detail what can be learned from each method of data collection.</p>
+					<a href="http://turkeyes.mit.edu">Website</a></br>
+
+				</div>
+			</section
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
